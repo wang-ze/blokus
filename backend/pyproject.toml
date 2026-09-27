@@ -1,0 +1,19 @@
+[project]
+name = "blokus"
+version = "0.1.0"
+description = "Blokus engine, heuristic bots, LLM players, and game records and ratings"
+authors = [
+    { name = "Ze Wang", email = "zewang@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "openai>=3.19.2",
+    "openai-agents>=0.22.3",
+]
+
+[project.scripts]
+blokus-sim = "blokus.simulate:main"
+
+[build-system]
+requires = ["uv_build>=0.12.2,<0.13.0"]
+build-backend = "uv_build"

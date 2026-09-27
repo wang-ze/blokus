@@ -1,0 +1,44 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Python build artifacts
+build/
+dist/
+*.egg-info/
+
+# Coverage and test tooling
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+
+# Type checker caches
+.mypy_cache/
+.pyright/
+
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Local game history (BLOKUS_DATA_DIR), also mounted into the Docker container
+/data/
+
+# OS
+.DS_Store
+
+# Other
+prototype_old.ipynb
+PROGRESS.md
+/screenshots/

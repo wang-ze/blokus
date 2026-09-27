@@ -1,0 +1,91 @@
+/* Blokus Arena component styles, copied from frontend/src/blokus_ui/render.py (CSS) at 92534b2.
+   The :root and .dark custom-property blocks are omitted: they are the color tokens (tokens.css). */
+.bk-board { width: 100%; max-width: 620px; height: auto; display: block; margin: 0 auto; }
+.bk-board .bk-bg { fill: var(--bk-board); }
+.bk-board .bk-label { fill: var(--bk-label); font: 10px system-ui, sans-serif; }
+.bk-empty { fill: var(--bk-empty); }
+.bk-blue { fill: var(--bk-blue); }
+.bk-yellow { fill: var(--bk-yellow); }
+.bk-red { fill: var(--bk-red); }
+.bk-green { fill: var(--bk-green); }
+.bk-board .bk-last { fill: var(--bk-mark); opacity: 0.85; }
+.bk-board .bk-corner { fill: none; stroke-width: 2.5; }
+.bk-status { font-size: 1.05rem; padding: 8px 12px; border-radius: 8px;
+  border: 1px solid var(--bk-border); background: var(--bk-card); }
+.bk-status.bk-over { border-color: var(--bk-accent); font-weight: 600; }
+.bk-players { display: flex; flex-direction: column; gap: 10px; }
+.bk-player { border: 1px solid var(--bk-border); border-radius: 10px; padding: 10px 12px;
+  background: var(--bk-card); }
+.bk-player.bk-turn { border-color: var(--bk-accent); box-shadow: 0 0 0 1px var(--bk-accent); }
+.bk-player.bk-inactive { opacity: 0.7; }
+.bk-head { display: flex; align-items: center; gap: 8px; }
+.bk-head .bk-name { font-weight: 600; }
+.bk-head .bk-score { margin-left: auto; font-weight: 700; font-variant-numeric: tabular-nums; }
+.bk-kind { font-size: 0.75rem; padding: 1px 6px; border-radius: 999px;
+  border: 1px solid var(--bk-border); color: var(--bk-muted); }
+.bk-detail, .bk-stats { font-size: 0.8rem; color: var(--bk-muted); margin-top: 2px; }
+.bk-swatch { display: inline-block; width: 12px; height: 12px; border-radius: 3px;
+  vertical-align: middle; }
+.bk-bg-blue { background: var(--bk-blue); }
+.bk-bg-yellow { background: var(--bk-yellow); }
+.bk-bg-red { background: var(--bk-red); }
+.bk-bg-green { background: var(--bk-green); }
+.bk-color-row { display: flex; gap: 8px; align-items: flex-start; margin-top: 8px; }
+.bk-color-row.bk-out { opacity: 0.5; }
+.bk-color-label { width: 64px; flex: none; font-size: 0.8rem; color: var(--bk-muted); }
+.bk-pieces { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: flex-end; }
+.bk-piece { display: block; }
+.bk-none { font-size: 0.8rem; color: var(--bk-muted); }
+.bk-log { list-style: none; margin: 0; padding: 0; max-height: 420px; overflow-y: auto; }
+.bk-log li { padding: 6px 4px; border-bottom: 1px solid var(--bk-border); font-size: 0.9rem; }
+.bk-log .bk-num { color: var(--bk-muted); font-variant-numeric: tabular-nums; margin-right: 4px; }
+.bk-log .bk-cells { color: var(--bk-muted); font-size: 0.8rem; }
+.bk-log .bk-reason { font-style: italic; color: var(--bk-muted); margin-top: 2px; }
+.bk-log .bk-error { color: var(--bk-danger-fg); font-size: 0.8rem; margin-top: 2px; }
+.bk-tag { font-size: 0.7rem; padding: 1px 6px; border-radius: 999px; margin-left: 4px;
+  background: var(--bk-danger-bg); color: var(--bk-danger-fg); }
+.bk-board.bk-interactive { cursor: pointer; touch-action: manipulation; }
+.bk-board .bk-anchor { opacity: 0.9; }
+.bk-board .bk-preview rect { pointer-events: none; }
+.bk-board .bk-preview.bk-bad rect { fill: none; stroke: var(--bk-danger-fg); stroke-width: 2;
+  stroke-dasharray: 4 2; }
+.bk-board .bk-preview.bk-ok rect { opacity: 0.6; }
+.bk-tray { border: 1px solid var(--bk-accent); border-radius: 10px; padding: 10px 12px;
+  margin-bottom: 8px; background: var(--bk-card); }
+.bk-tray-head { display: flex; align-items: center; gap: 8px; }
+.bk-tray-head .bk-clock { margin-left: auto; font-weight: 700; font-size: 1.2rem;
+  font-variant-numeric: tabular-nums; }
+.bk-tray-head .bk-clock.bk-low { color: var(--bk-danger-fg); }
+.bk-timebar { height: 4px; border-radius: 2px; background: var(--bk-border); margin: 6px 0 8px;
+  overflow: hidden; }
+.bk-timebar-fill { height: 100%; width: 100%; }
+.bk-picks { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+.bk-pick { border: 2px solid transparent; border-radius: 6px; padding: 2px; background: none;
+  cursor: pointer; line-height: 0; }
+.bk-pick:hover { border-color: var(--bk-border); }
+.bk-pick.bk-selected { border-color: var(--bk-accent); }
+.bk-pick:disabled { opacity: 0.25; cursor: not-allowed; }
+.bk-controls { display: flex; align-items: center; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+.bk-controls button { border: 1px solid var(--bk-border); border-radius: 6px; padding: 2px 10px;
+  background: var(--bk-card); cursor: pointer; font-size: 0.85rem; }
+.bk-hand { display: inline-flex; width: 56px; height: 56px; align-items: center;
+  justify-content: center; }
+/* Fixed height, so messages never move the board between two taps. */
+.bk-msg { font-size: 0.85rem; color: var(--bk-muted); height: 2.6em; line-height: 1.3em;
+  overflow: hidden; margin-top: 4px; }
+.bk-msg.bk-error { color: var(--bk-danger-fg); }
+.bk-help { font-size: 0.75rem; color: var(--bk-muted); }
+.bk-help summary { cursor: pointer; }
+.bk-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; border: none; }
+.bk-table tr { border: none; }
+.bk-table th, .bk-table td { text-align: left; padding: 6px 8px; border: none;
+  border-bottom: 1px solid var(--bk-border); vertical-align: top; }
+.bk-table th { color: var(--bk-muted); font-weight: 600; white-space: nowrap; }
+.bk-table td.bk-num-cell, .bk-table th.bk-num-cell { text-align: right;
+  font-variant-numeric: tabular-nums; }
+.bk-table .bk-sub { display: block; font-size: 0.75rem; color: var(--bk-muted); }
+.bk-table .bk-when, .bk-table .bk-nowrap { white-space: nowrap; }
+.bk-table.bk-ratings { width: auto; min-width: min(100%, 24rem); }
+/* Gradio's page hides sideways overflow, so wide tables scroll inside their own box. */
+.bk-scroll { overflow-x: auto; max-width: 100%; }
+.bk-note { font-size: 0.85rem; color: var(--bk-muted); margin: 6px 0; }

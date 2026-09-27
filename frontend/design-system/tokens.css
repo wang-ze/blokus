@@ -1,0 +1,101 @@
+/* Generated from tokens.json (Blokus Arena design system). Dark applies under [data-theme="dark"] or Gradio's .dark. */
+
+@font-face { font-family: 'Montserrat'; src: url('fonts/Montserrat-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+
+@font-face { font-family: 'Montserrat'; src: url('fonts/Montserrat-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+
+@font-face { font-family: 'IBM Plex Mono'; src: url('fonts/IBMPlexMono-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+
+:root, [data-theme="light"] {
+  --gr-page: #f9fafb;
+  --gr-text: #1f2937;
+  --bk-blue: #2f6fde;
+  --bk-yellow: #eab308;
+  --bk-red: #dc2d45;
+  --bk-green: #1f9d55;
+  --bk-empty: #eef1f5;
+  --bk-board: #cbd2db;
+  --bk-label: #6b7280;
+  --bk-mark: #ffffff;
+  --bk-muted: #6b7280;
+  --bk-card: #ffffff;
+  --bk-border: #e2e6ec;
+  --bk-accent: #2563eb;
+  --bk-danger-bg: #fdecec;
+  --bk-danger-fg: #b42318;
+  --shadow-turn: 0 0 0 1px #2563eb;
+}
+
+[data-theme="dark"], .dark {
+  --gr-page: #0b0f19;
+  --gr-text: #f3f4f6;
+  --bk-empty: #1e2530;
+  --bk-board: #0e131a;
+  --bk-label: #9aa4b2;
+  --bk-mark: #0e131a;
+  --bk-muted: #9aa4b2;
+  --bk-card: #161b22;
+  --bk-border: #2b323c;
+  --bk-accent: #7aa2ff;
+  --bk-danger-bg: #3a1618;
+  --bk-danger-fg: #ff9b95;
+  --shadow-turn: 0 0 0 1px #7aa2ff;
+}
+
+:root {
+  --space-1: 1px;
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --radius-piece: 1.5px;
+  --radius-2: 2px;
+  --radius-3: 3px;
+  --radius-4: 4px;
+  --radius-6: 6px;
+  --radius-8: 8px;
+  --radius-10: 10px;
+  --radius-pill: 999px;
+  --board-cell: 24px;
+  --board-margin: 20px;
+  --board-max-width: 620px;
+  --piece-cell: 9px;
+  --pick-cell: 10px;
+  --swatch: 12px;
+  --hand: 56px;
+  --timebar: 4px;
+  --log-max-height: 420px;
+  --opacity-anchor: 0.9;
+  --opacity-last: 0.85;
+  --opacity-inactive: 0.7;
+  --opacity-preview: 0.6;
+  --opacity-out: 0.5;
+  --opacity-disabled: 0.25;
+  --font-sans: Montserrat, ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+  --font-board: system-ui, sans-serif;
+}
+
+.body { font-family: var(--font-sans); font-size: 14px; font-weight: 400; }
+
+.status { font-family: var(--font-sans); font-size: 1.05rem; font-weight: 400; }
+
+.clock { font-family: var(--font-sans); font-size: 1.2rem; font-weight: 700; }
+
+.player-name { font-family: var(--font-sans); font-size: 14px; font-weight: 600; }
+
+.score { font-family: var(--font-sans); font-size: 14px; font-weight: 700; }
+
+.log { font-family: var(--font-sans); font-size: 0.9rem; font-weight: 400; }
+
+.note { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 400; line-height: 1.3em; }
+
+.detail { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 400; }
+
+.caption { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 400; }
+
+.tag { font-family: var(--font-sans); font-size: 0.7rem; font-weight: 400; }
+
+.board-label { font-family: var(--font-board); font-size: 10px; font-weight: 400; }

@@ -1,0 +1,69 @@
+<!-- @dsCard height=304 -->
+<!doctype html><html><head><meta charset="utf-8"><style>
+html,body{margin:0;height:100%;background:var(--gr-page)}
+.wrap{position:relative;width:960px;height:304px;overflow:hidden;background:var(--gr-page)}
+svg{position:absolute;left:0;top:0}
+.cell{rx:var(--radius-4)}
+.empty{fill:var(--bk-empty)} .blue{fill:var(--bk-blue)} .yellow{fill:var(--bk-yellow)}
+.red{fill:var(--bk-red)} .green{fill:var(--bk-green)} .board{fill:var(--bk-board)}
+.mark{fill:var(--bk-mark);opacity:var(--opacity-last)}
+.name{position:absolute;left:32px;bottom:64px;max-width:440px;margin:0;font-family:var(--font-sans);
+  font-weight:700;font-size:104px;line-height:.95;letter-spacing:-0.02em;color:var(--gr-text)}
+.tag{position:absolute;left:32px;bottom:32px;max-width:440px;margin:0;font-family:var(--font-sans);
+  font-size:14px;color:var(--bk-muted)}
+</style></head><body><div class="wrap">
+<svg width="960" height="304" viewBox="0 0 960 304" aria-hidden="true">
+<!-- blocks: bk-blue W5, bk-yellow L5, bk-red V5, bk-green T4 on bk-empty tiles over bk-board; 56px squares -->
+<!-- arrangement: a corner of the board, x 480 to the right edge bleeding off; each color placed at its own start corner and touching only diagonally -->
+<!-- pattern: "geometric, modular, dense UI" tiles, because the whole brand is a grid of rounded squares; last-move dots (bk-mark at opacity-last) on the latest piece -->
+<!-- scales: pitch 60 = 2.5 x board-cell, gap 4 = space-4, corners radius-4, dots echo board-cell's 3.5/24 mark -->
+<rect class="board" x="482" y="0" width="480" height="304"/>
+<rect class="cell blue" x="486" y="4" width="56" height="56"/>
+<rect class="cell empty" x="546" y="4" width="56" height="56"/>
+<rect class="cell empty" x="606" y="4" width="56" height="56"/>
+<rect class="cell empty" x="666" y="4" width="56" height="56"/>
+<rect class="cell yellow" x="726" y="4" width="56" height="56"/>
+<rect class="cell yellow" x="786" y="4" width="56" height="56"/>
+<rect class="cell yellow" x="846" y="4" width="56" height="56"/>
+<rect class="cell yellow" x="906" y="4" width="56" height="56"/>
+<rect class="cell blue" x="486" y="64" width="56" height="56"/>
+<rect class="cell blue" x="546" y="64" width="56" height="56"/>
+<rect class="cell empty" x="606" y="64" width="56" height="56"/>
+<rect class="cell empty" x="666" y="64" width="56" height="56"/>
+<rect class="cell empty" x="726" y="64" width="56" height="56"/>
+<rect class="cell empty" x="786" y="64" width="56" height="56"/>
+<rect class="cell empty" x="846" y="64" width="56" height="56"/>
+<rect class="cell yellow" x="906" y="64" width="56" height="56"/>
+<rect class="cell empty" x="486" y="124" width="56" height="56"/>
+<rect class="cell blue" x="546" y="124" width="56" height="56"/>
+<rect class="cell blue" x="606" y="124" width="56" height="56"/>
+<rect class="cell empty" x="666" y="124" width="56" height="56"/>
+<rect class="cell empty" x="726" y="124" width="56" height="56"/>
+<rect class="cell red" x="786" y="124" width="56" height="56"/>
+<circle class="mark" cx="814.0" cy="152.0" r="7"/>
+<rect class="cell empty" x="846" y="124" width="56" height="56"/>
+<rect class="cell empty" x="906" y="124" width="56" height="56"/>
+<rect class="cell empty" x="486" y="184" width="56" height="56"/>
+<rect class="cell green" x="546" y="184" width="56" height="56"/>
+<rect class="cell empty" x="606" y="184" width="56" height="56"/>
+<rect class="cell empty" x="666" y="184" width="56" height="56"/>
+<rect class="cell empty" x="726" y="184" width="56" height="56"/>
+<rect class="cell red" x="786" y="184" width="56" height="56"/>
+<circle class="mark" cx="814.0" cy="212.0" r="7"/>
+<rect class="cell empty" x="846" y="184" width="56" height="56"/>
+<rect class="cell empty" x="906" y="184" width="56" height="56"/>
+<rect class="cell green" x="486" y="244" width="56" height="56"/>
+<rect class="cell green" x="546" y="244" width="56" height="56"/>
+<rect class="cell green" x="606" y="244" width="56" height="56"/>
+<rect class="cell empty" x="666" y="244" width="56" height="56"/>
+<rect class="cell empty" x="726" y="244" width="56" height="56"/>
+<rect class="cell red" x="786" y="244" width="56" height="56"/>
+<circle class="mark" cx="814.0" cy="272.0" r="7"/>
+<rect class="cell red" x="846" y="244" width="56" height="56"/>
+<circle class="mark" cx="874.0" cy="272.0" r="7"/>
+<rect class="cell red" x="906" y="244" width="56" height="56"/>
+<circle class="mark" cx="934.0" cy="272.0" r="7"/>
+</svg>
+<p class="name">Blokus<br>Arena</p>
+<p class="tag">Play Blokus against heuristic bots and LLM agents.</p>
+</div></body></html>

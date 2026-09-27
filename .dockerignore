@@ -1,0 +1,11 @@
+# The image needs only the two Python projects and the lock file. Everything else stays out of
+# the build context, so secrets (.env), game history (data/), notebooks and caches never reach it.
+*
+!pyproject.toml
+!uv.lock
+!backend/pyproject.toml
+!backend/src/
+!frontend/pyproject.toml
+!frontend/src/
+**/__pycache__/
+**/*.py[cod]

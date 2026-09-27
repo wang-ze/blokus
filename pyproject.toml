@@ -1,0 +1,48 @@
+# Blokus Arena workspace: the game engine in backend/ and the web app in frontend/.
+# `uv sync` installs both, so `uv run blokus` and `uv run pytest` work from here.
+
+[project]
+name = "blokus-arena"
+version = "0.1.0"
+description = "Blokus Arena: play Blokus against heuristic bots and LLM agents"
+authors = [
+    { name = "Ze Wang", email = "zewang@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "blokus",
+    "blokus-ui",
+]
+
+[tool.uv]
+# The root only ties the workspace together; it has no code of its own.
+package = false
+
+[tool.uv.workspace]
+members = ["backend", "frontend"]
+
+[tool.uv.sources]
+blokus = { workspace = true }
+blokus-ui = { workspace = true }
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+    "ipython>=9.17.1",
+    "pytest>=9.1.1",
+    "ruff>=0.16.9",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["backend/tests", "frontend/tests", "tests"]
+addopts = ["--import-mode=importlib"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+src = ["backend/src", "frontend/src"]
+# The old exploratory notebook is kept for reference only. prototype.ipynb is maintained.
+extend-exclude = ["prototype_old.ipynb"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF"]
